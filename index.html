@@ -16,57 +16,58 @@
       --border: #e2e8f0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI','PingFang TC','Microsoft JhengHei',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+    body { font-family: 'Segoe UI','PingFang TC','Microsoft JhengHei',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:15px; }
 
     /* ── Hero ── */
-    .hero { background:linear-gradient(135deg,#0f2744 0%,#1a3a5c 50%,#0d4a3a 100%); color:#fff; padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden; }
+    .hero { background:linear-gradient(135deg,#0f2744 0%,#1a3a5c 55%,#0d4a3a 100%); color:#fff; padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .hero-badge { display:inline-block; background:rgba(232,160,32,.2); border:1px solid rgba(232,160,32,.5); color:var(--accent); padding:4px 14px; border-radius:20px; font-size:.78rem; letter-spacing:.08em; font-weight:600; margin-bottom:16px; }
     .hero h1 { font-size:clamp(1.8rem,5vw,3rem); font-weight:700; letter-spacing:-.02em; line-height:1.2; }
     .hero h1 span { color:var(--accent); }
     .hero-sub { margin-top:12px; font-size:1rem; color:rgba(255,255,255,.75); }
-    .meta-row { display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:28px; }
+    .meta-row { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:28px; }
     .meta-chip { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:8px; padding:8px 16px; font-size:.85rem; }
     .meta-chip strong { color:var(--accent); }
 
     /* ── Container ── */
-    .container { max-width:960px; margin:0 auto; padding:32px 16px 64px; }
+    .container { max-width:980px; margin:0 auto; padding:32px 16px 64px; }
 
     /* ── Section title ── */
-    .section-title { font-size:1.25rem; font-weight:700; color:var(--primary); display:flex; align-items:center; gap:8px; margin-bottom:16px; margin-top:32px; }
+    .section-title { font-size:1.2rem; font-weight:700; color:var(--primary); display:flex; align-items:center; gap:8px; margin-bottom:16px; margin-top:36px; padding-bottom:8px; border-bottom:2px solid var(--border); }
 
     /* ── Flight banner ── */
-    .flight-banner { background:var(--card); border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,.07); overflow:hidden; margin-bottom:28px; }
-    .flight-header { background:var(--primary); color:#fff; padding:14px 24px; font-weight:600; font-size:.95rem; display:flex; align-items:center; gap:8px; }
-    .flight-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; }
-    @media(max-width:580px){ .flight-grid{grid-template-columns:1fr;} }
+    .flight-banner { background:var(--card); border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,.07); overflow:hidden; margin-bottom:24px; }
+    .flight-header { background:var(--primary); color:#fff; padding:14px 24px; font-weight:600; font-size:.95rem; }
+    .flight-grid { display:grid; grid-template-columns:1fr 1fr; }
+    @media(max-width:560px){ .flight-grid{grid-template-columns:1fr;} }
     .flight-card { padding:20px 24px; border-right:1px solid var(--border); }
     .flight-card:last-child { border-right:none; }
     .flight-label { font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:600; margin-bottom:4px; }
     .flight-route { display:flex; align-items:center; gap:10px; margin:6px 0; }
     .airport-code { font-size:1.5rem; font-weight:700; color:var(--primary); }
     .flight-arrow { color:var(--accent); font-size:1.2rem; }
-    .flight-time { color:var(--muted); font-size:.85rem; }
+    .flight-time-sm { color:var(--muted); font-size:.85rem; }
     .flight-num { font-size:1rem; font-weight:600; color:var(--accent2); }
     .seat-badge { display:inline-block; background:#eef2ff; color:#3730a3; padding:2px 10px; border-radius:6px; font-size:.78rem; font-weight:600; margin-top:4px; }
-    .tip-box { background:#fffbeb; border-left:4px solid var(--accent); border-radius:0 10px 10px 0; padding:12px 16px; font-size:.875rem; color:#78350f; margin:16px 24px 20px; }
-
-    /* ── Confirmed hotel ── */
-    .hotel-confirmed { background:var(--card); border-radius:16px; box-shadow:0 2px 14px rgba(0,0,0,.07); border:2px solid var(--accent2); overflow:hidden; margin-bottom:14px; }
-    .hotel-confirmed-header { background:linear-gradient(90deg,var(--accent2),#1a5c4e); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:12px; }
-    .hotel-confirmed-header .badge { background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.4); padding:3px 12px; border-radius:20px; font-size:.72rem; font-weight:700; letter-spacing:.06em; }
-    .hotel-confirmed-body { padding:20px 24px; display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; }
-    .hc-item .label { font-size:.72rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em; }
-    .hc-item .value { font-size:.9rem; font-weight:600; color:var(--primary); margin-top:2px; }
-    .alert-box { background:#fef2f2; border-left:4px solid #dc2626; border-radius:0 10px 10px 0; padding:12px 16px; font-size:.875rem; color:#7f1d1d; margin-bottom:28px; }
+    .tip-box { background:#fffbeb; border-left:4px solid var(--accent); border-radius:0 10px 10px 0; padding:12px 16px; font-size:.875rem; color:#78350f; margin:14px 24px 20px; }
+    .alert-box { background:#fef2f2; border-left:4px solid #dc2626; border-radius:0 10px 10px 0; padding:12px 16px; font-size:.875rem; color:#7f1d1d; }
+    .info-box { background:#eff6ff; border-left:4px solid #3b82f6; border-radius:0 10px 10px 0; padding:12px 16px; font-size:.875rem; color:#1e3a5f; }
 
     /* ── Overview ── */
-    .overview { background:var(--card); border-radius:16px; box-shadow:0 2px 14px rgba(0,0,0,.07); padding:24px; margin-bottom:28px; }
-    .ov-row { display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); }
+    .overview { background:var(--card); border-radius:16px; box-shadow:0 2px 14px rgba(0,0,0,.07); overflow:hidden; margin-bottom:24px; }
+    .ov-row { display:flex; align-items:flex-start; gap:14px; padding:13px 20px; border-bottom:1px solid var(--border); }
     .ov-row:last-child { border-bottom:none; }
-    .ov-date { font-size:.8rem; font-weight:700; color:var(--primary); min-width:90px; padding-top:2px; }
-    .ov-icon { font-size:1.1rem; }
-    .ov-desc { font-size:.875rem; color:var(--text); }
+    .ov-date { font-size:.8rem; font-weight:700; color:var(--primary); min-width:96px; padding-top:2px; white-space:nowrap; }
+    .ov-icon { font-size:1.1rem; padding-top:1px; }
+    .ov-desc { font-size:.875rem; color:var(--text); line-height:1.6; }
+
+    /* ── Hotel confirmed ── */
+    .hotel-confirmed { background:var(--card); border-radius:16px; box-shadow:0 2px 14px rgba(0,0,0,.07); border:2px solid var(--accent2); overflow:hidden; margin-bottom:14px; }
+    .hotel-confirmed-header { background:linear-gradient(90deg,var(--accent2),#1a5c4e); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:12px; }
+    .hotel-confirmed-header .badge { background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.4); padding:3px 12px; border-radius:20px; font-size:.72rem; font-weight:700; letter-spacing:.06em; white-space:nowrap; }
+    .hotel-confirmed-body { padding:20px 24px; display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+    .hc-item .label { font-size:.72rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em; }
+    .hc-item .value { font-size:.88rem; font-weight:600; color:var(--primary); margin-top:2px; line-height:1.4; }
 
     /* ── Day cards ── */
     .day-card { background:var(--card); border-radius:16px; box-shadow:0 2px 14px rgba(0,0,0,.07); overflow:hidden; margin-bottom:24px; }
@@ -80,108 +81,154 @@
     .timeline { list-style:none; position:relative; }
     .timeline::before { content:''; position:absolute; left:18px; top:8px; bottom:8px; width:2px; background:linear-gradient(to bottom,var(--accent),var(--accent2)); }
     .tl-item { display:flex; gap:16px; margin-bottom:22px; position:relative; }
-    .tl-dot { width:36px; height:36px; border-radius:50%; background:var(--primary); color:#fff; font-size:.72rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative; z-index:1; font-weight:700; line-height:1.1; text-align:center; }
+    .tl-item:last-child { margin-bottom:0; }
+    .tl-dot { width:36px; height:36px; border-radius:50%; background:var(--primary); color:#fff; font-size:.68rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative; z-index:1; font-weight:700; line-height:1.1; text-align:center; }
     .tl-dot.accent { background:var(--accent); }
     .tl-dot.green { background:var(--accent2); }
     .tl-dot.red { background:#dc2626; }
     .tl-dot.purple { background:#7c3aed; }
     .tl-dot.orange { background:#ea580c; }
+    .tl-dot.amber { background:#d97706; }
     .tl-content { flex:1; padding-top:6px; }
     .tl-time { font-size:.75rem; color:var(--muted); font-weight:600; margin-bottom:2px; }
     .tl-event { font-weight:600; font-size:.95rem; color:var(--primary); }
-    .tl-desc { font-size:.85rem; color:var(--muted); margin-top:4px; }
+    .tl-desc { font-size:.85rem; color:var(--muted); margin-top:4px; line-height:1.6; }
 
     /* ── Route box ── */
-    .route-box { background:#f0f4ff; border-radius:8px; padding:10px 14px; font-size:.82rem; font-family:'Courier New',monospace; color:#334155; margin-top:8px; border-left:3px solid #6366f1; }
-
-    /* ── Huawei agenda ── */
-    .huawei-agenda { background:linear-gradient(135deg,#1a0505,#3d0808); border-radius:12px; overflow:hidden; margin-top:10px; }
-    .huawei-agenda-header { padding:10px 16px; background:rgba(255,255,255,.08); color:#fff; font-size:.78rem; font-weight:700; letter-spacing:.06em; border-bottom:1px solid rgba(255,255,255,.12); }
-    .huawei-row { display:grid; grid-template-columns:90px 80px 1fr auto; gap:0; border-bottom:1px solid rgba(255,255,255,.08); }
-    .huawei-row:last-child { border-bottom:none; }
-    .huawei-row > div { padding:9px 12px; font-size:.82rem; color:rgba(255,255,255,.85); }
-    .huawei-row .hw-time { color:#ff6b6b; font-weight:700; font-family:monospace; }
-    .huawei-row .hw-cat { color:rgba(255,255,255,.5); font-size:.72rem; }
-    .huawei-row .hw-topic { color:#fff; font-weight:600; }
-    .huawei-row .hw-speaker { color:rgba(255,255,255,.7); font-size:.78rem; text-align:right; }
-    @media(max-width:600px){ .huawei-row{grid-template-columns:70px 1fr;} .huawei-row .hw-cat,.huawei-row .hw-speaker{display:none;} }
-
-    /* ── Dinner invite ── */
-    .dinner-card { background:linear-gradient(135deg,#1e3a5f,#0d4a3a); border-radius:12px; padding:16px 20px; margin-top:10px; display:flex; align-items:flex-start; gap:14px; }
-    .dinner-icon { font-size:2rem; flex-shrink:0; }
-    .dinner-info .title { font-weight:700; font-size:.95rem; color:#fff; }
-    .dinner-info .addr { font-size:.8rem; color:rgba(255,255,255,.65); margin-top:2px; }
-    .dinner-info .meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
-    .dinner-badge { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); padding:3px 10px; border-radius:20px; font-size:.75rem; color:#fff; font-weight:600; }
-    .dinner-badge.hot { background:rgba(232,160,32,.25); border-color:rgba(232,160,32,.5); color:var(--accent); }
+    .route-box { background:#f0f4ff; border-radius:8px; padding:10px 14px; font-size:.82rem; font-family:'Courier New',monospace; color:#334155; margin-top:8px; border-left:3px solid #6366f1; line-height:1.8; }
 
     /* ── Tables ── */
-    .vendor-table { width:100%; border-collapse:collapse; font-size:.85rem; margin-top:10px; }
-    .vendor-table th { background:var(--primary); color:#fff; padding:8px 12px; text-align:left; font-weight:600; }
-    .vendor-table td { padding:8px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
-    .vendor-table tr:last-child td { border-bottom:none; }
-    .vendor-table tr:nth-child(even) td { background:#f8fafc; }
-    .vendor-name { font-weight:600; color:var(--primary); }
+    .data-table { width:100%; border-collapse:collapse; font-size:.85rem; margin-top:10px; }
+    .data-table th { background:var(--primary); color:#fff; padding:8px 12px; text-align:left; font-weight:600; }
+    .data-table td { padding:8px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+    .data-table tr:last-child td { border-bottom:none; }
+    .data-table tr:nth-child(even) td { background:#f8fafc; }
+    .data-table .vendor { font-weight:600; color:var(--primary); white-space:nowrap; }
 
-    .rest-table { width:100%; border-collapse:collapse; font-size:.85rem; margin-top:10px; }
-    .rest-table th { background:var(--accent2); color:#fff; padding:8px 12px; font-weight:600; text-align:left; }
-    .rest-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
-    .rest-table tr:nth-child(even) td { background:#f8fafc; }
+    .green-table th { background:var(--accent2); }
+    .amber-table th { background:#b45309; }
 
-    /* ── Afternoon tea block ── */
+    /* ── MRT table ── */
+    .mrt-table { width:100%; border-collapse:collapse; font-size:.85rem; margin-top:12px; }
+    .mrt-table th { background:#e11d48; color:#fff; padding:8px 12px; font-weight:600; text-align:left; }
+    .mrt-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
+    .mrt-table tr:nth-child(even) td { background:#fff1f2; }
+    .mrt-time { font-weight:700; color:#be123c; }
+
+    /* ── Dinner options ── */
+    .dinner-options { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; margin-top:12px; }
+    .dinner-opt { background:var(--card); border-radius:12px; border:1px solid var(--border); padding:14px 16px; box-shadow:0 1px 6px rgba(0,0,0,.05); }
+    .dinner-opt-tag { display:inline-block; padding:2px 9px; border-radius:20px; font-size:.7rem; font-weight:700; margin-bottom:8px; }
+    .tag-rec { background:#dcfce7; color:#166534; }
+    .tag-fun { background:#fff7ed; color:#9a3412; }
+    .tag-late { background:#f0f9ff; color:#075985; }
+    .dinner-opt h4 { font-size:.9rem; font-weight:700; color:var(--primary); margin-bottom:4px; }
+    .dinner-opt p { font-size:.8rem; color:var(--muted); line-height:1.55; }
+
+    /* ── ATMOCE card ── */
+    .atmoce-card { background:linear-gradient(135deg,#1e1b4b,#312e81); border-radius:12px; padding:16px 20px; margin-top:10px; }
+    .atmoce-card .title { font-weight:700; color:#fff; font-size:.95rem; margin-bottom:8px; }
+    .atmoce-card .row { display:flex; gap:10px; align-items:flex-start; margin-top:6px; font-size:.82rem; color:rgba(255,255,255,.8); }
+    .atmoce-card .row span:first-child { flex-shrink:0; }
+
+    /* ── Huawei agenda ── */
+    .hw-agenda { background:#1a0505; border-radius:12px; overflow:hidden; margin-top:10px; }
+    .hw-agenda-hdr { padding:10px 16px; background:rgba(255,255,255,.06); color:rgba(255,255,255,.8); font-size:.78rem; font-weight:700; letter-spacing:.06em; border-bottom:1px solid rgba(255,255,255,.1); }
+    .hw-row { display:grid; grid-template-columns:100px 100px 1fr 160px; gap:0; border-bottom:1px solid rgba(255,255,255,.07); }
+    .hw-row:last-child { border-bottom:none; }
+    .hw-row > div { padding:9px 12px; font-size:.82rem; }
+    .hw-row .hw-t { color:#f87171; font-weight:700; font-family:monospace; font-size:.8rem; }
+    .hw-row .hw-cat { color:rgba(255,255,255,.45); font-size:.72rem; padding-top:10px; }
+    .hw-row .hw-topic { color:#fff; font-weight:600; }
+    .hw-row .hw-spk { color:rgba(255,255,255,.65); font-size:.78rem; text-align:right; line-height:1.4; }
+    @media(max-width:620px){ .hw-row{grid-template-columns:80px 1fr;} .hw-row .hw-cat,.hw-row .hw-spk{display:none;} }
+
+    /* ── Dinner invite ── */
+    .dinner-invite { background:linear-gradient(135deg,#1e3a5f,#0d4a3a); border-radius:12px; padding:16px 20px; margin-top:10px; display:flex; align-items:flex-start; gap:14px; }
+    .dinner-invite .icon { font-size:2rem; flex-shrink:0; }
+    .dinner-invite .info .title { font-weight:700; font-size:.95rem; color:#fff; }
+    .dinner-invite .info .addr { font-size:.8rem; color:rgba(255,255,255,.65); margin-top:3px; }
+    .dinner-invite .info .badges { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .dbadge { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); padding:3px 10px; border-radius:20px; font-size:.75rem; color:#fff; font-weight:600; }
+    .dbadge.hot { background:rgba(232,160,32,.25); border-color:rgba(232,160,32,.5); color:var(--accent); }
+
+    /* ── Tea / personal dinner ── */
     .tea-card { background:linear-gradient(135deg,#fef3c7,#fde68a); border-radius:12px; padding:16px 20px; margin-top:10px; border-left:4px solid #f59e0b; }
-    .tea-card .tea-title { font-weight:700; color:#92400e; font-size:.95rem; }
-    .tea-card .tea-people { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .tea-card .tc-title { font-weight:700; color:#92400e; font-size:.95rem; }
+    .tea-chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
     .tea-chip { background:rgba(255,255,255,.6); border:1px solid rgba(146,64,14,.2); padding:3px 10px; border-radius:20px; font-size:.78rem; font-weight:600; color:#92400e; }
+    .tea-note { font-size:.8rem; color:#92400e; margin-top:8px; }
 
-    /* ── Personal dinner card ── */
     .personal-dinner { background:linear-gradient(135deg,#4a1d96,#6d28d9); border-radius:12px; padding:16px 20px; margin-top:10px; }
     .personal-dinner .pd-title { font-weight:700; color:#fff; font-size:.95rem; }
     .personal-dinner .pd-sub { font-size:.82rem; color:rgba(255,255,255,.7); margin-top:4px; }
 
-    /* ── Checklist ── */
-    .checklist { list-style:none; }
-    .checklist li { padding:6px 0; font-size:.9rem; display:flex; align-items:flex-start; gap:8px; border-bottom:1px solid var(--border); }
-    .checklist li:last-child { border-bottom:none; }
-    .checklist li::before { content:'☐'; color:var(--accent2); font-size:1rem; flex-shrink:0; margin-top:1px; }
+    /* ── Day 4 route visual ── */
+    .route-visual { background:var(--card); border-radius:12px; border:1px solid var(--border); padding:16px 20px; margin-top:10px; }
+    .rv-row { display:flex; align-items:center; gap:10px; padding:6px 0; font-size:.85rem; }
+    .rv-row:not(:last-child)::after { content:'↓'; display:block; color:var(--accent); font-size:1rem; margin-left:22px; }
+    .rv-time { font-weight:700; color:var(--primary); min-width:54px; }
+    .rv-loc { font-size:.85rem; color:var(--text); }
+    .rv-arrow { color:var(--muted); font-size:.8rem; margin-left:6px; }
+
+    /* ── Packing list ── */
+    .pack-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+    .pack-section { background:var(--card); border-radius:14px; box-shadow:0 2px 10px rgba(0,0,0,.06); overflow:hidden; }
+    .pack-section-hdr { padding:12px 16px; font-weight:700; font-size:.88rem; color:#fff; }
+    .pack-hdr-blue { background:#1e40af; }
+    .pack-hdr-teal { background:#0f766e; }
+    .pack-hdr-rose { background:#be185d; }
+    .pack-hdr-amber { background:#b45309; }
+    .pack-hdr-indigo { background:#4338ca; }
+    .pack-hdr-green { background:#166534; }
+    .pack-item { display:flex; align-items:flex-start; gap:8px; padding:8px 16px; border-bottom:1px solid var(--border); font-size:.82rem; }
+    .pack-item:last-child { border-bottom:none; }
+    .pack-item::before { content:'☐'; color:var(--accent2); flex-shrink:0; font-size:.9rem; margin-top:1px; }
+    .pack-item-name { font-weight:600; color:var(--primary); flex:0 0 auto; min-width:120px; }
+    .pack-item-note { color:var(--muted); font-size:.78rem; margin-top:1px; }
+
+    /* ── Digital checklist ── */
+    .digital-check { background:var(--card); border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.06); margin-top:16px; }
+    .digital-check-hdr { padding:12px 20px; background:#1e3a5f; color:#fff; font-weight:700; font-size:.88rem; }
+    .dc-row { display:grid; grid-template-columns:1fr 130px 80px; gap:0; border-bottom:1px solid var(--border); }
+    .dc-row:last-child { border-bottom:none; }
+    .dc-row > div { padding:9px 16px; font-size:.83rem; vertical-align:middle; }
+    .dc-item { font-weight:600; color:var(--primary); }
+    .dc-deadline { color:#dc2626; font-weight:600; font-size:.78rem; }
+    .dc-status { color:var(--muted); font-size:.78rem; }
+    @media(max-width:540px){ .dc-row{grid-template-columns:1fr 100px;} .dc-row .dc-status{display:none;} }
 
     /* ── Deadline box ── */
     .deadline-box { background:linear-gradient(135deg,#7f1d1d,#991b1b); color:#fff; border-radius:12px; padding:16px 20px; margin-bottom:16px; }
-    .deadline-box h4 { font-size:.85rem; letter-spacing:.08em; opacity:.8; margin-bottom:10px; }
-    .deadline-item { display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,.15); }
+    .deadline-box h4 { font-size:.83rem; letter-spacing:.08em; opacity:.8; margin-bottom:10px; }
+    .deadline-item { display:flex; align-items:center; gap:12px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,.15); }
     .deadline-item:last-child { border-bottom:none; }
     .deadline-time { font-size:1.1rem; font-weight:700; min-width:60px; }
-    .deadline-desc { font-size:.87rem; opacity:.9; }
-
-    /* ── Suzhou ── */
-    .suzhou-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px; }
-    @media(max-width:600px){ .suzhou-grid{grid-template-columns:1fr;} }
-    .suzhou-card { background:var(--card); border-radius:12px; padding:16px; border:1px solid var(--border); }
-    .suzhou-card h4 { font-size:.9rem; color:var(--primary); margin-bottom:6px; }
-    .suzhou-card p { font-size:.82rem; color:var(--muted); }
-    .sz-table { width:100%; border-collapse:collapse; font-size:.85rem; }
-    .sz-table th { background:#4a7766; color:#fff; padding:8px 12px; text-align:left; }
-    .sz-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
-    .sz-table tr:nth-child(even) td { background:#f0faf6; }
-    .sz-flag { color:var(--accent2); font-weight:700; }
+    .deadline-desc { font-size:.88rem; opacity:.9; }
 
     /* ── Tips ── */
     .tips-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
     .tip-card { background:var(--card); border-radius:12px; padding:16px; border:1px solid var(--border); box-shadow:0 1px 6px rgba(0,0,0,.05); }
     .tip-num { display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:50%; background:var(--primary); color:#fff; font-size:.75rem; font-weight:700; margin-bottom:8px; }
     .tip-card h4 { font-size:.9rem; font-weight:700; margin-bottom:6px; }
-    .tip-card p { font-size:.82rem; color:var(--muted); }
+    .tip-card p { font-size:.82rem; color:var(--muted); line-height:1.55; }
 
     /* ── Footer ── */
-    footer { background:var(--primary); color:rgba(255,255,255,.6); text-align:center; padding:24px; font-size:.8rem; }
+    footer { background:var(--primary); color:rgba(255,255,255,.6); text-align:center; padding:24px; font-size:.8rem; line-height:1.8; }
     footer strong { color:rgba(255,255,255,.9); }
+
+    /* ── Flow chart ── */
+    .flow-chart { background:#0f172a; border-radius:14px; padding:20px 24px; font-family:'Courier New',monospace; font-size:.82rem; color:#94a3b8; line-height:2; overflow-x:auto; }
+    .flow-date { color:#e8a020; font-weight:700; }
+    .flow-key { color:#4ade80; font-weight:700; }
+    .flow-flag { color:#f87171; font-weight:700; }
   </style>
 </head>
 <body>
 
 <!-- ── Hero ── -->
 <div class="hero">
-  <div class="hero-badge">✈ 長榮航空 · 商務行程</div>
+  <div class="hero-badge">✈ 長榮航空 · 商務行程 · 最終完整版</div>
   <h1>上海 <span>SNEC</span> 商務行程</h1>
   <div class="hero-sub">2026年6月2日（二）→ 6月5日（五）· 4天3夜</div>
   <div class="meta-row">
@@ -199,30 +246,22 @@
     <div class="ov-row">
       <div class="ov-date">06/02（二）</div>
       <div class="ov-icon">✈️</div>
-      <div class="ov-desc">KHH → PVG（BR706 16:50）· 磁浮 + L2 入住龍之夢萬麗</div>
+      <div class="ov-desc">捷運紅線 → 小港機場 → BR706 16:50 → PVG 19:05 · 磁浮 + L2 入住龍之夢萬麗</div>
     </div>
     <div class="ov-row">
       <div class="ov-date">06/03（三）</div>
       <div class="ov-icon">🏢</div>
-      <div class="ov-desc">
-        上午：ATMOCE 上海總部拜訪（摩瓦新能源）<br>
-        下午：SNEC 展場參觀 → 華為數字能源新品發表會（16:00–18:00）<br>
-        晚上：丰顺府 · 與華為＋菱台餐敘（18:00）
-      </div>
+      <div class="ov-desc">08:30 從萬麗搭滴滴 → <strong>ATMOCE 上海總部</strong>（10:00 商務會談）→ 下午 SNEC → <strong>16:00 華為發表會</strong> → 丰顺府晚宴（18:00）</div>
     </div>
     <div class="ov-row">
       <div class="ov-date">06/04（四）</div>
       <div class="ov-icon">🔋</div>
-      <div class="ov-desc">
-        上午：SNEC 電芯 / PCS / EMS 技術研討<br>
-        下午茶：與保威、Ben、Winter 展會附近小聚（13:00–15:00）<br>
-        晚上：與仁潔共進晚餐（19:00）
-      </div>
+      <div class="ov-desc">SNEC 電芯 / PCS / EMS 技術研討 + 商務商談 · <strong>13:00 保威、Ben、Winter 下午茶</strong> · <strong>19:00 仁潔晚餐</strong></div>
     </div>
     <div class="ov-row">
       <div class="ov-date">06/05（五）</div>
       <div class="ov-icon">🌿</div>
-      <div class="ov-desc">法租界梧桐漫步 → 南京西路採買 → 15:30 出發 → PVG → KHH（BR705 20:05）</div>
+      <div class="ov-desc">法租界 → 田子坊 → 新天地（午餐）→ 南京西路 · ⚑ 15:00 取行李 → 15:30 出發 → BR705 20:05</div>
     </div>
   </div>
 
@@ -235,9 +274,9 @@
         <div class="flight-label">去程 · 2026/06/02（二）</div>
         <div class="flight-num">BR706</div>
         <div class="flight-route">
-          <div><div class="airport-code">KHH</div><div class="flight-time">16:50 · 第一航廈</div></div>
+          <div><div class="airport-code">KHH</div><div class="flight-time-sm">16:50 · 第一航廈</div></div>
           <div class="flight-arrow">→</div>
-          <div><div class="airport-code">PVG</div><div class="flight-time">19:05 · 第二航廈</div></div>
+          <div><div class="airport-code">PVG</div><div class="flight-time-sm">19:05 · 第二航廈</div></div>
         </div>
         <div class="seat-badge">座位 28H（走道）· 經濟艙（Q）· 2PC 免費</div>
       </div>
@@ -245,16 +284,14 @@
         <div class="flight-label">回程 · 2026/06/05（五）</div>
         <div class="flight-num">BR705</div>
         <div class="flight-route">
-          <div><div class="airport-code">PVG</div><div class="flight-time">20:05 · 第二航廈</div></div>
+          <div><div class="airport-code">PVG</div><div class="flight-time-sm">20:05 · 第二航廈</div></div>
           <div class="flight-arrow">→</div>
-          <div><div class="airport-code">KHH</div><div class="flight-time">22:20 · 第一航廈</div></div>
+          <div><div class="airport-code">KHH</div><div class="flight-time-sm">22:20 · 第一航廈</div></div>
         </div>
         <div class="seat-badge">座位 27H（走道）· 經濟艙（Q）· 2PC 免費</div>
       </div>
     </div>
-    <div class="tip-box">
-      🚄 <strong>磁浮優惠：</strong>憑當日機票可以 <strong>¥40</strong> 優惠價購買磁浮列車票（標準 ¥50），8 分鐘直達龍陽路站，轉乘 L2 前往中山公園。
-    </div>
+    <div class="tip-box">💡 <strong>磁浮優惠：</strong>憑當日機票可以 <strong>¥40</strong> 優惠價購買磁浮列車票（標準 ¥50），8 分鐘直達龍陽路站，轉乘 L2 前往中山公園。</div>
   </div>
 
   <!-- ── 確認住宿 ── -->
@@ -269,15 +306,16 @@
     </div>
     <div class="hotel-confirmed-body">
       <div class="hc-item"><div class="label">地鐵</div><div class="value">中山公園 L2 / L3 / L4</div></div>
-      <div class="hc-item"><div class="label">商場</div><div class="value">龍之夢購物中心直通</div></div>
-      <div class="hc-item"><div class="label">至 SNEC</div><div class="value">55–65 分鐘（L2→L17）</div></div>
-      <div class="hc-item"><div class="label">至外灘</div><div class="value">35 分鐘（L2）</div></div>
+      <div class="hc-item"><div class="label">商場</div><div class="value">龍之夢購物中心直通<br>營業至 22:00</div></div>
+      <div class="hc-item"><div class="label">至 SNEC</div><div class="value">L2 西行 → 虹橋站換乘 → 徐涇東站<br>全程 55–65 分鐘</div></div>
+      <div class="hc-item"><div class="label">至外灘</div><div class="value">35 分鐘（L2 東行）</div></div>
       <div class="hc-item"><div class="label">商務服務</div><div class="value">⭐⭐⭐⭐⭐ 行政酒廊</div></div>
       <div class="hc-item"><div class="label">入住 / 退房</div><div class="value">06/02 晚 → 06/05 09:00</div></div>
     </div>
   </div>
-  <div class="alert-box" style="margin-top:10px">
-    ⚠️ <strong>SNEC 通勤路線：</strong>L2 → 虹橋火車站 → 換乘 L17 → 徐涇東，全程 55–65 分鐘。地鐵 2 號線不直達徐涇東，需在虹橋換乘。
+  <div class="info-box" style="margin-bottom:8px">
+    📍 <strong>SNEC 展館地址：</strong>上海市青浦區崧澤大道 333 號（國家會展中心）· 距虹橋交通樞紐直線 1.5 公里<br>
+    🚇 <strong>官方交通：</strong>搭乘地鐵 2 號線至徐涇東站，出站即達展館。從萬麗出發：中山公園站搭 L2 西行 → 依站內「徐涇東 / 國家會展中心」指引換乘 → 徐涇東站，全程約 55–65 分鐘。
   </div>
 
   <!-- ══════════════ Day 1 ══════════════ -->
@@ -287,32 +325,43 @@
       <div class="day-number">1</div>
       <div>
         <div class="day-title">高雄出發 → 魔都登陸</div>
-        <div class="day-date">2026年6月2日（星期二）</div>
+        <div class="day-date">2026年6月2日（星期二）· 最晚機場報到 15:50 · 建議 14:20 抵達</div>
       </div>
     </div>
     <div class="day-body">
       <ul class="timeline">
+
         <li class="tl-item">
-          <div class="tl-dot">AM</div>
+          <div class="tl-dot">MRT</div>
           <div class="tl-content">
-            <div class="tl-time">上午 · 行前整備</div>
-            <div class="tl-event">最終確認 + 數位工具開通</div>
-            <ul class="checklist" style="margin-top:10px">
-              <li>完成行李最終確認</li>
-              <li>Alipay 國際版已綁定台灣 Visa/Master（護照實名認證，建議 5/30 前完成）</li>
-              <li>下載高德地圖，確認大陸 eSIM / 中港卡已開通</li>
-              <li>備用現金 ¥300–500（部分商戶不支援 Alipay 國際版）</li>
-              <li>BR706 起飛前 48 小時（5/31 16:50 起）可長榮 App 完成網路預辦登機</li>
-            </ul>
+            <div class="tl-time">視出發站計算</div>
+            <div class="tl-event">捷運紅線前往小港機場</div>
+            <div class="tl-desc">目標：<strong>14:20 抵達 KHH 第一航廈</strong>（起飛前 2.5 小時）。長榮 BR706 check-in 截止 15:50（起飛前 60 分）。</div>
+            <table class="mrt-table">
+              <thead><tr><th>出發站</th><th>至小港站車程</th><th>建議出發時間</th></tr></thead>
+              <tbody>
+                <tr><td>南岡山（R24）</td><td>約 55 分鐘</td><td class="mrt-time">13:10 前出發</td></tr>
+                <tr><td>左營 HSR（R16）</td><td>約 40 分鐘</td><td class="mrt-time">13:25 前出發</td></tr>
+                <tr><td>高雄（R11）</td><td>約 20 分鐘</td><td class="mrt-time">13:45 前出發</td></tr>
+                <tr><td>三多商圈（R8）</td><td>約 12 分鐘</td><td class="mrt-time">13:55 前出發</td></tr>
+                <tr><td>鳳山西（R6）</td><td>約 8 分鐘</td><td class="mrt-time">13:55 前出發</td></tr>
+              </tbody>
+            </table>
+            <div class="alert-box" style="margin-top:10px">
+              📌 小港站（R4a）為紅線南端終點，搭乘往小港方向列車。出站依「國際線 / 第一航廈」指標步行約 5–10 分鐘。攜帶大型行李請額外預留 10 分鐘緩衝。
+            </div>
           </div>
         </li>
+
         <li class="tl-item">
-          <div class="tl-dot accent">14:50</div>
+          <div class="tl-dot accent">14:20</div>
           <div class="tl-content">
-            <div class="tl-time">14:50</div>
-            <div class="tl-event">前往高雄小港機場 KHH 第一航廈</div>
+            <div class="tl-time">14:20</div>
+            <div class="tl-event">抵達 KHH 第一航廈 · 辦理登機手續</div>
+            <div class="tl-desc">如已完成網路報到可直接托運行李 → 通關安檢 → 候機。</div>
           </div>
         </li>
+
         <li class="tl-item">
           <div class="tl-dot accent">16:50</div>
           <div class="tl-content">
@@ -320,161 +369,185 @@
             <div class="tl-event">長榮 BR706 起飛 · KHH → PVG（2 小時 15 分）</div>
           </div>
         </li>
+
         <li class="tl-item">
           <div class="tl-dot green">19:05</div>
           <div class="tl-content">
             <div class="tl-time">19:05</div>
             <div class="tl-event">浦東落地 → 入住龍之夢萬麗</div>
-            <div class="route-box">PVG 抵達層購票（憑機票 ¥40）→ 磁浮（8 分）→ 龍陽路站 → 轉 L2 → 中山公園站 → 步行至萬麗<br>全程約 50 分鐘</div>
+            <div class="route-box">PVG T2 抵達層購票（憑機票 ¥40 優惠票）
+  → 磁浮列車（8 分鐘）→ 龍陽路站
+  → 地鐵 L2 西行（中山公園方向）→ 中山公園站
+  → 步行至龍之夢萬麗辦理 Check-in
+全程約 50 分鐘</div>
           </div>
         </li>
+
         <li class="tl-item">
           <div class="tl-dot">晚</div>
           <div class="tl-content">
-            <div class="tl-time">晚間</div>
-            <div class="tl-event">覓食蓄能</div>
-            <div class="tl-desc">飯店基座龍之夢購物中心或周邊覓食，推薦<strong>頂特勒粥麵館</strong>（香菇肉絲冷麵）暖胃。</div>
+            <div class="tl-time">晚間 · 覓食蓄能（三選一）</div>
+            <div class="tl-event">飯店基座龍之夢購物中心 or 深夜外出</div>
+            <div class="dinner-options">
+              <div class="dinner-opt">
+                <div class="dinner-opt-tag tag-rec">🍜 推薦首選</div>
+                <h4>南京大牌檔（中山公園龍之夢店）</h4>
+                <p>長寧龍之夢購物中心內，步行即達。豐富江浙風味小吃、金陵烤鴨、<strong>民國美齡粥</strong>，環境充滿江南市井氣息。展會第一天喝碗熱粥最舒服。</p>
+                <p style="margin-top:6px;color:#6b7280;font-size:.75rem">⏰ 通常至 22:00</p>
+              </div>
+              <div class="dinner-opt">
+                <div class="dinner-opt-tag tag-fun">🦀 熱鬧解乏</div>
+                <h4>七欣天（長寧龍之夢店）</h4>
+                <p>龍之夢 8 層。主打「蟹逅」主題鍋物，香辣蟹吃完後加高湯涮蔬菜與麵條，熱鬧氛圍極佳解乏。</p>
+                <p style="margin-top:6px;color:#6b7280;font-size:.75rem">⏰ 通常至 22:00，建議去電確認最後點餐時間</p>
+              </div>
+              <div class="dinner-opt">
+                <div class="dinner-opt-tag tag-late">🌙 深夜首選</div>
+                <h4>頂特勒粥麵館（淮海路店）</h4>
+                <p>黃浦區淮海中路494弄22號（近大世界站）。24 小時全天候，招牌<strong>雪菜黃魚麵</strong>與<strong>香菇乾貝瘦肉粥</strong>，深夜米其林推薦。</p>
+                <p style="margin-top:6px;color:#6b7280;font-size:.75rem">⏰ 24 小時 · 從中山公園搭 L1 或滴滴約 20–30 分鐘</p>
+              </div>
+            </div>
           </div>
         </li>
+
       </ul>
     </div>
   </div>
 
   <!-- ══════════════ Day 2 ══════════════ -->
-  <div class="section-title">🗓️ Day 2 · 06/03（三） ATMOCE 拜訪 → SNEC 展場 → 華為新品發表 → 丰顺府餐敘</div>
+  <div class="section-title">🗓️ Day 2 · 06/03（三） ATMOCE 拜訪 → SNEC 展場 → 華為發表會 → 丰顺府晚宴</div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-number">2</div>
       <div>
-        <div class="day-title">ATMOCE 上海總部 → SNEC 展場 → 華為發表會 → 丰顺府晚宴</div>
+        <div class="day-title">ATMOCE 上海總部 → SNEC 展場 → 華為新品發表 → 丰顺府晚宴</div>
         <div class="day-date">2026年6月3日（星期三）</div>
       </div>
     </div>
     <div class="day-body">
       <ul class="timeline">
 
-        <!-- 09:00 出發 ATMOCE -->
         <li class="tl-item">
-          <div class="tl-dot accent">09:00</div>
+          <div class="tl-dot accent">08:30</div>
           <div class="tl-content">
-            <div class="tl-time">09:00 · 從萬麗出發</div>
-            <div class="tl-event">前往 ATMOCE 上海總部</div>
-            <div class="tl-desc">搭車（滴滴 / 計程車）前往<strong>上海摩瓦新能源科技有限公司</strong>。</div>
+            <div class="tl-time">08:30 · 從萬麗出發</div>
+            <div class="tl-event">搭滴滴前往 ATMOCE 上海總部</div>
+            <div class="atmoce-card">
+              <div class="title">🏭 ATMOCE · 上海摩瓦新能源科技有限公司</div>
+              <div class="row"><span>📍</span><span>中國（上海）自由貿易試驗區 <strong>華益路76號4幢104-108室</strong>（浦東新區）</span></div>
+              <div class="row"><span>🚗</span><span>從龍之夢萬麗搭滴滴直達，預計車程 <strong>40–55 分鐘</strong>（視早高峰交通）</span></div>
+              <div class="row"><span>⏰</span><span>08:30 出發 → 保留緩衝 → <strong>10:00 前抵達</strong></span></div>
+            </div>
           </div>
         </li>
 
-        <!-- 09:30–12:00 ATMOCE -->
         <li class="tl-item">
-          <div class="tl-dot purple">09:30</div>
+          <div class="tl-dot purple">10:00</div>
           <div class="tl-content">
-            <div class="tl-time">09:30–12:00</div>
-            <div class="tl-event">ATMOCE 上海總部深度拜訪</div>
-            <div class="tl-desc">上海摩瓦新能源科技有限公司商務會談，了解技術路線與合作可能性。</div>
+            <div class="tl-time">10:00–11:45</div>
+            <div class="tl-event">ATMOCE 商務會談</div>
+            <div class="tl-desc">了解技術路線與雙方合作可能性，深度交流光儲整合方向。</div>
           </div>
         </li>
 
-        <!-- 12:00 午餐 -->
         <li class="tl-item">
-          <div class="tl-dot">12:00</div>
+          <div class="tl-dot">11:45</div>
           <div class="tl-content">
-            <div class="tl-time">12:00–13:00</div>
-            <div class="tl-event">午餐（ATMOCE 附近）</div>
-            <div class="tl-desc">與 ATMOCE 夥伴共進午餐或自行覓食，預留 60 分鐘，13:00 前出發。</div>
+            <div class="tl-time">11:45–13:00</div>
+            <div class="tl-event">午餐</div>
+            <div class="tl-desc">與 ATMOCE 團隊共進午餐（附近或對方安排），預留充裕時間交流，<strong>13:00 前完成</strong>。</div>
           </div>
         </li>
 
-        <!-- 13:00 前往 SNEC -->
         <li class="tl-item">
           <div class="tl-dot orange">13:00</div>
           <div class="tl-content">
-            <div class="tl-time">13:00</div>
-            <div class="tl-event">搭車 / 地鐵返回 SNEC 展館</div>
-            <div class="tl-desc">預計 14:00 前抵達，可視位置選擇直接搭車或轉乘 L17。</div>
+            <div class="tl-time">13:00 · 出發</div>
+            <div class="tl-event">搭滴滴前往 SNEC 展館</div>
+            <div class="tl-desc">從浦東 ATMOCE 直達 SNEC，預計車程 <strong>40–60 分鐘</strong>，14:00 前抵達。</div>
+            <div class="route-box">📍 SNEC 展館：國家會展中心（上海）上海市青浦區崧澤大道 333 號</div>
           </div>
         </li>
 
-        <!-- 14:00–16:00 SNEC 展場 -->
         <li class="tl-item">
           <div class="tl-dot accent">14:00</div>
           <div class="tl-content">
             <div class="tl-time">14:00–16:00</div>
             <div class="tl-event">SNEC 展場自由參觀</div>
-            <div class="tl-desc">兩小時精準巡訪一線光儲廠商：</div>
-            <table class="vendor-table">
+            <table class="data-table">
               <thead><tr><th>廠商</th><th>考察重點</th></tr></thead>
               <tbody>
-                <tr><td class="vendor-name">陽光電源</td><td>液冷大型儲能 PowerTitan + 工商業 PowerStack 硬體拓樸與安全消防工程</td></tr>
-                <tr><td class="vendor-name">天合儲能</td><td>傳統組件巨頭轉型光儲一體化的系統整合度</td></tr>
-                <tr><td class="vendor-name">晶科能源</td><td>供應鏈報價與一體化方案</td></tr>
-                <tr><td class="vendor-name">阿特斯</td><td>組件轉型光儲整合能力評估</td></tr>
+                <tr><td class="vendor">陽光電源</td><td>液冷大型儲能 PowerTitan + 工商業 PowerStack 硬體拓樸與安全消防工程</td></tr>
+                <tr><td class="vendor">天合儲能</td><td>傳統組件巨頭轉型光儲一體化的系統整合度</td></tr>
+                <tr><td class="vendor">晶科能源</td><td>供應鏈報價與一體化方案</td></tr>
+                <tr><td class="vendor">阿特斯</td><td>組件轉型光儲整合能力評估</td></tr>
               </tbody>
             </table>
           </div>
         </li>
 
-        <!-- 16:00–18:00 華為新品發表 -->
         <li class="tl-item">
           <div class="tl-dot red">16:00</div>
           <div class="tl-content">
-            <div class="tl-time">16:00–18:00 · 重點場次</div>
+            <div class="tl-time">16:00–18:00 · ⭐ 重點場次</div>
             <div class="tl-event">華為數字能源 · 新品發表暨技術論壇</div>
-            <div class="tl-desc">準時抵達華為展位完成簽到，進入專屬展區。</div>
-            <div class="huawei-agenda">
-              <div class="huawei-agenda-header">📋 華為 · 議程表</div>
-              <div class="huawei-row">
-                <div class="hw-time">16:00–16:30</div>
+            <div class="tl-desc">準時簽到入場。</div>
+            <div class="hw-agenda">
+              <div class="hw-agenda-hdr">📋 華為議程表</div>
+              <div class="hw-row">
+                <div class="hw-t">16:00–16:30</div>
                 <div class="hw-cat">簽到</div>
-                <div class="hw-topic">簽到入場</div>
-                <div class="hw-speaker"></div>
+                <div class="hw-topic">入場簽到</div>
+                <div class="hw-spk">—</div>
               </div>
-              <div class="huawei-row">
-                <div class="hw-time">16:30–17:00</div>
+              <div class="hw-row">
+                <div class="hw-t">16:30–17:00</div>
                 <div class="hw-cat">思想引領</div>
                 <div class="hw-topic">數字能源戰略</div>
-                <div class="hw-speaker">侯金龍<br>數字能源公司總裁</div>
+                <div class="hw-spk">侯金龍<br>數字能源公司總裁</div>
               </div>
-              <div class="huawei-row">
-                <div class="hw-time">17:00–17:30</div>
+              <div class="hw-row">
+                <div class="hw-t">17:00–17:30</div>
                 <div class="hw-cat">技術領導力</div>
                 <div class="hw-topic">光伏戰略及新品發布</div>
-                <div class="hw-speaker">周涛<br>智能光伏產品線副總裁</div>
+                <div class="hw-spk">周涛<br>智能光伏產品線副總裁</div>
               </div>
-              <div class="huawei-row">
-                <div class="hw-time">17:30–17:45</div>
+              <div class="hw-row">
+                <div class="hw-t">17:30–17:45</div>
                 <div class="hw-cat">技術領導力</div>
                 <div class="hw-topic">優秀實踐成果（一）</div>
-                <div class="hw-speaker">客戶分享</div>
+                <div class="hw-spk">客戶分享</div>
               </div>
-              <div class="huawei-row">
-                <div class="hw-time">17:45–18:00</div>
+              <div class="hw-row">
+                <div class="hw-t">17:45–18:00</div>
                 <div class="hw-cat">技術領導力</div>
                 <div class="hw-topic">優秀實踐成果（二）</div>
-                <div class="hw-speaker">客戶分享</div>
+                <div class="hw-spk">客戶分享</div>
               </div>
             </div>
           </div>
         </li>
 
-        <!-- 18:00 丰顺府晚宴 -->
         <li class="tl-item">
           <div class="tl-dot green">18:00</div>
           <div class="tl-content">
             <div class="tl-time">18:00 · 晚宴</div>
             <div class="tl-event">丰顺府 · 與華為＋菱台團隊餐敘</div>
-            <div class="dinner-card">
-              <div class="dinner-icon">🍽️</div>
-              <div class="dinner-info">
+            <div class="dinner-invite">
+              <div class="icon">🍽️</div>
+              <div class="info">
                 <div class="title">丰顺府（上海蟠龙新天地店）</div>
-                <div class="addr">📍 青浦区蟠鼎路123弄8号 · 上海蟠龍新天地</div>
-                <div class="meta">
-                  <div class="dinner-badge hot">06/03 · 18:00</div>
-                  <div class="dinner-badge">包廂用餐</div>
-                  <div class="dinner-badge">蘇俊邀約</div>
-                  <div class="dinner-badge">186****8752</div>
+                <div class="addr">📍 青浦區蟠鼎路123弄8號 · 上海蟠龍新天地</div>
+                <div class="badges">
+                  <div class="dbadge hot">06/03 · 18:00</div>
+                  <div class="dbadge">包廂用餐</div>
+                  <div class="dbadge">蘇俊邀約</div>
+                  <div class="dbadge">186****8752</div>
                 </div>
               </div>
             </div>
-            <div class="tl-desc" style="margin-top:8px">華為發表會結束後，從 SNEC 搭滴滴前往蟠龍新天地，車程約 15–20 分鐘。</div>
+            <div class="tl-desc" style="margin-top:8px">🚗 華為發表會結束後搭滴滴前往蟠龍新天地，車程約 15–20 分鐘。</div>
           </div>
         </li>
 
@@ -500,7 +573,8 @@
           <div class="tl-content">
             <div class="tl-time">07:30</div>
             <div class="tl-event">飯店出發前往 SNEC</div>
-            <div class="route-box">中山公園（L2）→ 虹橋火車站（換乘 L17）→ 徐涇東 · 全程約 55–65 分鐘</div>
+            <div class="route-box">中山公園站（L2 西行）→ 依站內指示換乘 → 徐涇東站（國家會展中心）
+全程約 55–65 分鐘</div>
           </div>
         </li>
 
@@ -509,60 +583,57 @@
           <div class="tl-content">
             <div class="tl-time">上午 · 橫向技術研討</div>
             <div class="tl-event">電芯、PCS 與 EMS 深度交流</div>
-            <table class="vendor-table" style="margin-top:10px">
+            <table class="data-table" style="margin-top:10px">
               <thead><tr><th>廠商</th><th>研討重點</th></tr></thead>
               <tbody>
-                <tr><td class="vendor-name">寧德時代</td><td>625Ah+ 大電芯系統與電池壽命技術</td></tr>
-                <tr><td class="vendor-name">科華數能 / 上能電氣</td><td>構網型 PCS 拓樸結構</td></tr>
-                <tr><td class="vendor-name">國電南瑞</td><td>電網級繼電保護 + 虛擬電廠（VPP）接入能力</td></tr>
+                <tr><td class="vendor">寧德時代</td><td>625Ah+ 大電芯系統與電池壽命技術</td></tr>
+                <tr><td class="vendor">科華數能 / 上能電氣</td><td>構網型 PCS 拓樸結構</td></tr>
+                <tr><td class="vendor">國電南瑞</td><td>電網級繼電保護 + 虛擬電廠（VPP）接入能力</td></tr>
               </tbody>
             </table>
           </div>
         </li>
 
         <li class="tl-item">
-          <div class="tl-dot">上→午</div>
+          <div class="tl-dot">午前</div>
           <div class="tl-content">
             <div class="tl-time">午前 · 精準商務商談</div>
-            <div class="tl-event">對有意向供應商進行深入商務條件商談</div>
-            <ul class="checklist" style="margin-top:8px">
-              <li>針對前日有意向供應商深入商務條件商談</li>
-              <li>考察無人機自動化巡檢新銳企業</li>
-              <li>評估清掃機器人實際 ROI 與軟體資產評估能力</li>
-            </ul>
-          </div>
-        </li>
-
-        <!-- 13:00 下午茶 -->
-        <li class="tl-item">
-          <div class="tl-dot" style="background:#f59e0b;font-size:.65rem">13:00</div>
-          <div class="tl-content">
-            <div class="tl-time">13:00–15:00</div>
-            <div class="tl-event">與保威、Ben、Winter 下午茶小聚</div>
-            <div class="tea-card">
-              <div class="tea-title">☕ 展會附近下午茶</div>
-              <div class="tea-people">
-                <div class="tea-chip">保威</div>
-                <div class="tea-chip">Ben</div>
-                <div class="tea-chip">Winter</div>
-              </div>
-              <div style="font-size:.82rem;color:#92400e;margin-top:8px">地點建議選在 SNEC 展館附近咖啡廳或酒店大廳，方便展後直接前往。可選 徐涇東周邊 或 虹橋商務區 咖啡廳。</div>
+            <div class="tl-event">有意向供應商深入商務條件商談</div>
+            <div class="tl-desc">
+              · 針對前日有意向供應商深入商務條件商談<br>
+              · 考察<strong>無人機自動化巡檢</strong>新銳企業<br>
+              · 評估<strong>清掃機器人</strong>實際 ROI 與軟體資產評估能力
             </div>
           </div>
         </li>
 
-        <!-- 15:00 返館 -->
+        <li class="tl-item">
+          <div class="tl-dot amber">13:00</div>
+          <div class="tl-content">
+            <div class="tl-time">13:00–15:00</div>
+            <div class="tl-event">與保威、Ben、Winter 下午茶小聚</div>
+            <div class="tea-card">
+              <div class="tc-title">☕ 展會附近下午茶</div>
+              <div class="tea-chips">
+                <div class="tea-chip">保威</div>
+                <div class="tea-chip">Ben</div>
+                <div class="tea-chip">Winter</div>
+              </div>
+              <div class="tea-note">地點建議選在 SNEC 展館附近咖啡廳或酒店大廳，可選<strong>徐涇東周邊</strong>或<strong>虹橋商務區</strong>咖啡廳。</div>
+            </div>
+          </div>
+        </li>
+
         <li class="tl-item">
           <div class="tl-dot">15:00</div>
           <div class="tl-content">
             <div class="tl-time">15:00–17:30</div>
-            <div class="tl-event">下午收尾 · 最後商務接洽</div>
-            <div class="tl-desc">利用剩餘時間完成最後商務名片交換與後續跟進約定，17:30 離館返市區。</div>
-            <div class="route-box">徐涇東（L17）→ 虹橋火車站（轉 L2）→ 中山公園（返回萬麗）</div>
+            <div class="tl-event">最後商務接洽 · 17:30 離館返市區</div>
+            <div class="tl-desc">完成最後商務名片交換與後續跟進約定。</div>
+            <div class="route-box">徐涇東站 → L2 東行 → 中山公園（返回萬麗）</div>
           </div>
         </li>
 
-        <!-- 19:00 仁潔晚餐 -->
         <li class="tl-item">
           <div class="tl-dot purple">19:00</div>
           <div class="tl-content">
@@ -580,10 +651,10 @@
   </div>
 
   <!-- ══════════════ Day 4 ══════════════ -->
-  <div class="section-title">🗓️ Day 4 · 06/05（五） 法租界梧桐 → 南京西路採買 → 返台</div>
+  <div class="section-title">🗓️ Day 4 · 06/05（五） 上海半日深度旅行 → 返台</div>
   <div class="deadline-box">
     <h4>⚑ 回程三個硬時間點（不可延後）</h4>
-    <div class="deadline-item"><div class="deadline-time">15:00</div><div class="deadline-desc">返回飯店取行李</div></div>
+    <div class="deadline-item"><div class="deadline-time">15:00</div><div class="deadline-desc">返回萬麗取行李</div></div>
     <div class="deadline-item"><div class="deadline-time">15:30</div><div class="deadline-desc">中山公園站出發</div></div>
     <div class="deadline-item"><div class="deadline-time">16:30</div><div class="deadline-desc">抵達浦東機場（起飛前 3.5 小時）</div></div>
   </div>
@@ -591,12 +662,23 @@
     <div class="day-header">
       <div class="day-number">4</div>
       <div>
-        <div class="day-title">法租界梧桐 → 南京西路採買 → 返台</div>
+        <div class="day-title">法租界 → 田子坊 → 新天地 → 南京西路 → 返台</div>
         <div class="day-date">2026年6月5日（星期五）</div>
       </div>
     </div>
     <div class="day-body">
+
+      <div class="route-visual" style="margin-bottom:20px">
+        <div style="font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:.06em">半日路線全覽</div>
+        <div class="rv-row"><div class="rv-time">09:15</div><div class="rv-loc">🌿 法租界（武康路 / 安福路）</div><div class="rv-arrow">→ 滴滴 5 分 / 步行 15 分</div></div>
+        <div class="rv-row"><div class="rv-time">10:55</div><div class="rv-loc">🏮 田子坊（泰康路石庫門）</div><div class="rv-arrow">→ 滴滴 5 分</div></div>
+        <div class="rv-row"><div class="rv-time">12:00</div><div class="rv-loc">🍽 新天地（午餐）</div><div class="rv-arrow">→ 滴滴 10 分</div></div>
+        <div class="rv-row"><div class="rv-time">13:00</div><div class="rv-loc">☕ 南京西路（星巴克烘焙工坊 + 蝴蝶酥）</div><div class="rv-arrow">→ L2 或滴滴</div></div>
+        <div class="rv-row"><div class="rv-time">15:00</div><div class="rv-loc" style="color:#dc2626;font-weight:700">⚑ 中山公園萬麗（取行李）</div><div class="rv-arrow"></div></div>
+      </div>
+
       <ul class="timeline">
+
         <li class="tl-item">
           <div class="tl-dot accent">09:00</div>
           <div class="tl-content">
@@ -605,41 +687,62 @@
             <div class="tl-desc">向萬麗前台辦理行李寄存，確認 <strong>15:00 前取回</strong>。</div>
           </div>
         </li>
+
         <li class="tl-item">
           <div class="tl-dot green">09:15</div>
           <div class="tl-content">
-            <div class="tl-time">09:15–11:00</div>
-            <div class="tl-event">武康路 / 安福路 · 法租界梧桐漫步</div>
-            <div class="tl-desc">早晨遊客稀少，造訪網紅買手店與精品咖啡廳，考察上海精緻新零售商業模式。<strong>11:00 前完成。</strong></div>
-            <ul class="checklist" style="margin-top:8px">
-              <li>武康大樓經典打卡點</li>
-              <li>MANNER Coffee / 隅田川咖啡</li>
-              <li>買手店新零售觀察</li>
-            </ul>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-dot">11:15</div>
-          <div class="tl-content">
-            <div class="tl-time">11:15–12:30</div>
-            <div class="tl-event">南京西路午餐</div>
-            <div class="tl-desc">佳家湯包（蟹粉小籠）或 小楊生煎（道地上海點心）</div>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-dot">12:30</div>
-          <div class="tl-content">
-            <div class="tl-time">12:30–15:00</div>
-            <div class="tl-event">南京西路旗艦購物 + 伴手禮採買</div>
-            <table class="rest-table" style="margin-top:10px">
-              <thead><tr><th>地點</th><th>內容</th></tr></thead>
+            <div class="tl-time">09:15–10:45 · 法租界</div>
+            <div class="tl-event">武康路 / 安福路 · 梧桐樹漫步</div>
+            <table class="data-table green-table" style="margin-top:10px">
+              <thead><tr><th>景點</th><th>說明</th></tr></thead>
               <tbody>
-                <tr><td><strong>星巴克臻選上海烘焙工坊</strong></td><td>南京西路 789 號，沉浸式體驗商業裝潢</td></tr>
-                <tr><td><strong>國際飯店蝴蝶酥</strong></td><td>黃河路 170 號，排隊名品伴手禮（L2 南京西路站步行 5 分鐘）</td></tr>
+                <tr><td class="vendor">武康大樓</td><td>1924 年法式公寓，轉角弧形建築，上海最美打卡地標</td></tr>
+                <tr><td class="vendor">花園公寓</td><td>Art Deco 風格，1930 年代法租界代表建築</td></tr>
+                <tr><td class="vendor">巴金故居</td><td>武康路 113 號，近代文學人文體驗</td></tr>
+                <tr><td class="vendor">MANNER Coffee</td><td>上海在地精品咖啡代表品牌，早晨人少舒適</td></tr>
+                <tr><td class="vendor">買手店觀察</td><td>新零售商業模式考察，多元精選選品店</td></tr>
               </tbody>
             </table>
           </div>
         </li>
+
+        <li class="tl-item">
+          <div class="tl-dot">10:55</div>
+          <div class="tl-content">
+            <div class="tl-time">10:55–12:00 · 田子坊</div>
+            <div class="tl-event">泰康路石庫門 · 1930 年代文創社區</div>
+            <div class="tl-desc">
+              · 石庫門建築群（迷宮式弄堂漫遊）<br>
+              · 手工藝伴手禮（在地特色，優於一般紀念品）<br>
+              · 本地特色咖啡廳 &amp; 老上海生活場景
+            </div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-dot amber">12:00</div>
+          <div class="tl-content">
+            <div class="tl-time">12:00–13:00 · 新天地</div>
+            <div class="tl-event">新天地午餐</div>
+            <div class="tl-desc">從田子坊搭滴滴 5 分鐘至新天地。石庫門改建高端商業區，午餐預算 ¥100–150 / 人。</div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-dot purple">13:00</div>
+          <div class="tl-content">
+            <div class="tl-time">13:00–14:30 · 南京西路</div>
+            <div class="tl-event">旗艦購物 + 伴手禮採買</div>
+            <table class="data-table" style="margin-top:10px">
+              <thead><tr><th>地點</th><th>地址</th><th>內容</th></tr></thead>
+              <tbody>
+                <tr><td class="vendor">星巴克臻選<br>上海烘焙工坊</td><td>南京西路 789 號</td><td>全球最大星巴克，沉浸式體驗商業裝潢</td></tr>
+                <tr><td class="vendor">國際飯店蝴蝶酥</td><td>黃河路 170 號</td><td>上海排隊名品伴手禮（L2 南京西路站步行 5 分鐘）</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+
         <li class="tl-item">
           <div class="tl-dot red">15:00</div>
           <div class="tl-content">
@@ -647,14 +750,17 @@
             <div class="tl-event">準時返回萬麗取行李</div>
           </div>
         </li>
+
         <li class="tl-item">
           <div class="tl-dot red">15:30</div>
           <div class="tl-content">
             <div class="tl-time">⚑ 15:30 · 不可延後</div>
             <div class="tl-event">出發前往浦東機場</div>
-            <div class="route-box">中山公園（L2）→ 龍陽路（磁浮 ¥40）→ PVG · 預計 16:30 抵達（起飛前 3.5 小時）</div>
+            <div class="route-box">中山公園站（L2 東行）→ 龍陽路站（磁浮 ¥50）→ 浦東機場（PVG）
+預計 16:30 抵達（起飛前 3.5 小時）</div>
           </div>
         </li>
+
         <li class="tl-item">
           <div class="tl-dot green">20:05</div>
           <div class="tl-content">
@@ -662,44 +768,107 @@
             <div class="tl-event">長榮 BR705 起飛 · PVG → KHH · 22:20 高雄落地 ✈️</div>
           </div>
         </li>
+
       </ul>
     </div>
   </div>
 
-  <!-- ── 附錄：蘇州 ── -->
-  <div class="section-title">🚄 附錄：蘇州一日遊選項評估（Day 4 替代方案）</div>
-  <div class="day-card">
-    <div class="day-header" style="background:linear-gradient(90deg,#2e7d6b,#1a5c4e);">
-      <div class="day-number" style="border-color:rgba(255,255,255,.4)">蘇</div>
-      <div>
-        <div class="day-title">蘇州一日遊 · Day 4 替代方案</div>
-        <div class="day-date">高鐵 25–30 分鐘，可遊 4–5 小時，安全返程 ✅ 可行</div>
-      </div>
+  <!-- ── 行李清單 ── -->
+  <div class="section-title">🧳 行李打包清單</div>
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:14px">針對：高階主管 · 商務為主 · 最後一天旅遊 · 簡易夜間購物 · 4天3夜</div>
+
+  <div class="pack-grid">
+
+    <div class="pack-section">
+      <div class="pack-section-hdr pack-hdr-blue">👔 商務衣物（3夜4天）</div>
+      <div class="pack-item"><div><div class="pack-item-name">西裝外套 1–2 件</div><div class="pack-item-note">深色首選（藏青 / 炭灰），可搭配不同褲裝</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">西裝褲 2 條</div><div class="pack-item-note">含一條可搭外套</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">正式襯衫 3 件</div><div class="pack-item-note">白 / 淡色，展會 2 天 + 備用 1 件</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">領帶 2–3 條</div><div class="pack-item-note">晚宴用較正式款</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">皮鞋（黑 / 深棕）1 雙</div><div class="pack-item-note">已穿較合腳的款式</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">正式皮帶 1 條</div><div class="pack-item-note"></div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">西裝襪 4 雙</div><div class="pack-item-note"></div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">袖釦 / 小配件</div><div class="pack-item-note">晚宴場合加分</div></div></div>
     </div>
-    <div class="day-body">
-      <div class="tip-box" style="margin:0 0 16px">
-        🔑 <strong>行李策略（關鍵）：</strong>退房後帶行李至<strong>虹橋火車站寄存</strong>（¥15–25/件），回程取行李後沿 L2 東行至機場，無需返回飯店。
-      </div>
-      <table class="sz-table">
-        <thead><tr><th>時間</th><th>行程</th></tr></thead>
-        <tbody>
-          <tr><td class="sz-flag">06:45</td><td>退房，帶行李至虹橋火車站寄存（L2，35 分鐘）</td></tr>
-          <tr><td>08:00</td><td>搭 G 字高鐵前往蘇州站（¥34.5，25 分鐘）</td></tr>
-          <tr><td>08:45</td><td><strong>蘇州博物館</strong>（免費，貝聿銘設計，建議官網預約）約 1.5 小時</td></tr>
-          <tr><td>10:30</td><td><strong>拙政園</strong>（UNESCO 世界遺產，¥90，步行 3 分鐘）約 1.5 小時</td></tr>
-          <tr><td>12:15</td><td><strong>平江路午餐</strong> — 同得興麵館（楓鎮大肉麵）+ 蘇式糕點伴手禮</td></tr>
-          <tr><td>13:45</td><td>蘇州站搭高鐵返虹橋（25 分鐘），14:15 取回行李</td></tr>
-          <tr><td>15:30</td><td>L2 東行 → 龍陽路 → 磁浮 → 浦東機場</td></tr>
-          <tr><td class="sz-flag">16:30</td><td>✅ 抵達浦東機場（起飛前 3.5 小時）</td></tr>
-          <tr><td>20:05</td><td>BR705 起飛，22:20 高雄落地</td></tr>
-        </tbody>
-      </table>
-      <div class="suzhou-grid" style="margin-top:16px">
-        <div class="suzhou-card"><h4>🏛 蘇州博物館（免費，需預約）</h4><p>華裔建築大師<strong>貝聿銘</strong>操刀設計，現代江南風格建築本身即是展品，建議遊覽 1.5 小時。</p></div>
-        <div class="suzhou-card"><h4>🌿 拙政園（¥90）</h4><p>中國四大名園之首，UNESCO 世界文化遺產。廊橋、水院、假山，與博物館步行 3 分鐘，建議遊覽 1.5 小時。</p></div>
-        <div class="suzhou-card"><h4>🛶 平江路</h4><p>蘇州古城歷史街區，石板路沿河而行。同得興麵館楓鎮大肉麵 + 蘇繡小物，比上海更具在地特色。</p></div>
-        <div class="suzhou-card"><h4>❌ 杭州西湖（不建議）</h4><p>單程 1.5 小時，實際遊覽不足 2 小時。杭州站至西湖無捷運，20:05 班機前無法安全返回浦東。</p></div>
-      </div>
+
+    <div class="pack-section">
+      <div class="pack-section-hdr pack-hdr-teal">👟 旅遊便裝（Day 4 用）</div>
+      <div class="pack-item"><div><div class="pack-item-name">休閒長褲 1 條</div><div class="pack-item-note">輕便舒適，適合徒步</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">Polo 衫 / T恤 1–2 件</div><div class="pack-item-note"></div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">運動鞋 / 步行鞋 1 雙</div><div class="pack-item-note">法租界、田子坊石板路多，必備</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">輕薄外套 / 薄風衣 1 件</div><div class="pack-item-note">展館及餐廳冷氣強，商務場合亦適用</div></div></div>
+    </div>
+
+    <div class="pack-section">
+      <div class="pack-section-hdr pack-hdr-rose">🪥 盥洗備品（飯店不一定提供）</div>
+      <div class="pack-item"><div><div class="pack-item-name">個人電動刮鬍刀</div><div class="pack-item-note">拋棄式品質有落差</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">指甲剪</div><div class="pack-item-note">飯店幾乎不提供</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">個人洗面乳 / 卸妝品</div><div class="pack-item-note">飯店提供品牌較基本</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">保濕乳液 / 精華液</div><div class="pack-item-note">展館冷氣強，保濕仍重要</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">防曬乳 SPF50+</div><div class="pack-item-note">Day 4 戶外漫步必備</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">止汗劑 / 體香劑</div><div class="pack-item-note">展會長時間步行必備</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">牙線 / 牙間刷</div><div class="pack-item-note">個人習慣備品</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">個人常備藥</div><div class="pack-item-note">感冒 / 腸胃 / 止痛</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">OK繃 / 防水創可貼</div><div class="pack-item-note">新鞋磨腳、石板路長走用</div></div></div>
+    </div>
+
+    <div class="pack-section">
+      <div class="pack-section-hdr pack-hdr-amber">💻 3C 與充電</div>
+      <div class="pack-item"><div><div class="pack-item-name">筆記型電腦 + 充電器</div><div class="pack-item-note">Claude Code / 商務報告使用</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">手機充電器 / 充電線</div><div class="pack-item-note">Type-C / Lightning 視機型</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">萬用轉接頭</div><div class="pack-item-note">中國插座與台灣相同（Type A），備用建議攜帶</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">行動電源（≤100Wh）</div><div class="pack-item-note">展館長日必備，可登機</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">藍牙耳機</div><div class="pack-item-note">飛機 + 候機使用</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">USB 多孔充電頭</div><div class="pack-item-note">減少插頭數量</div></div></div>
+    </div>
+
+    <div class="pack-section">
+      <div class="pack-section-hdr pack-hdr-indigo">📄 證件與商務必備</div>
+      <div class="pack-item"><div><div class="pack-item-name">護照（效期 6 個月以上）</div><div class="pack-item-note">⚠️ 最重要，務必確認效期</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">台胞證</div><div class="pack-item-note">台灣居民赴陸必備</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">名片（充足）</div><div class="pack-item-note">展會三天，建議攜帶 100 張以上</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">機票電子憑證</div><div class="pack-item-note">手機 / 列印，磁浮優惠票需出示</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">信用卡（Visa / Master）</div><div class="pack-item-note">Alipay 綁定用、備用刷卡</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">人民幣現金 ¥300–500</div><div class="pack-item-note">不支援 Alipay 的攤位備用</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">旅遊平安險保單</div><div class="pack-item-note">確認大陸地區醫療保障</div></div></div>
+    </div>
+
+    <div class="pack-section">
+      <div class="pack-section-hdr pack-hdr-green">🛍️ 夜間採買輔助</div>
+      <div class="pack-item"><div><div class="pack-item-name">可折疊購物袋</div><div class="pack-item-note">採買伴手禮、蝴蝶酥紙袋易濕軟</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">行李秤（小型）</div><div class="pack-item-note">確認回程行李不超重</div></div></div>
+      <div class="pack-item"><div><div class="pack-item-name">真空壓縮袋 1–2 個</div><div class="pack-item-note">購物後壓縮衣物，預留行李箱空間</div></div></div>
+    </div>
+
+  </div>
+
+  <!-- 數位行前準備 -->
+  <div class="digital-check">
+    <div class="digital-check-hdr">📱 數位行前準備（出發前完成）</div>
+    <div class="dc-row">
+      <div class="dc-item">Alipay 國際版 · 實名認證 + 綁卡</div>
+      <div class="dc-deadline">截止 5/30</div>
+      <div class="dc-status">☐ 待確認</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-item">OKB eSIM 或 DJB 翻牆通 · 安裝開通</div>
+      <div class="dc-deadline">截止 5/31</div>
+      <div class="dc-status">☐ 待確認</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-item">ExpressVPN · 安裝（飯店 Wi-Fi 用）</div>
+      <div class="dc-deadline">截止 5/31</div>
+      <div class="dc-status">☐ 待確認</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-item">長榮 App · BR706 網路預辦登機</div>
+      <div class="dc-deadline">5/31 16:50 起</div>
+      <div class="dc-status">☐ 待確認</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-item">高德地圖 App · 下載 + 離線地圖（上海市區）</div>
+      <div class="dc-deadline">出發前</div>
+      <div class="dc-status">☐ 待確認</div>
     </div>
   </div>
 
@@ -707,42 +876,97 @@
   <div class="section-title">📋 出行必備貼士</div>
   <div class="tips-grid">
     <div class="tip-card">
-      <div class="tip-num">1</div>
+      <div class="tip-num">01</div>
       <h4>Alipay 國際版設置</h4>
-      <p>下載「Alipay」<strong>國際版</strong>（非中國大陸版），綁定台灣 Visa/Master 前需完成<strong>護照實名認證</strong>。建議 5/30 前在台灣操作完成。</p>
+      <p>下載「Alipay」<strong>國際版</strong>（非中國大陸版），綁定台灣 Visa/Master 前需完成<strong>護照實名認證</strong>。建議 5/30 前在台灣操作完成。備用現金 ¥300–500。</p>
     </div>
     <div class="tip-card">
-      <div class="tip-num">2</div>
-      <h4>SNEC 通勤口訣</h4>
-      <p>每次前往展館：<strong>L2 西行 → 虹橋火車站換乘 → L17 → 徐涇東</strong>。高德地圖輸入「國家會展中心（虹橋）」自動規劃正確路線。</p>
+      <div class="tip-num">02</div>
+      <h4>SNEC 展館交通</h4>
+      <p>展館地址：青浦區崧澤大道 333 號（國家會展中心）<br>
+      從萬麗：中山公園站搭 L2 西行 → 依站內指示 → 徐涇東站，全程 55–65 分鐘。</p>
     </div>
     <div class="tip-card">
-      <div class="tip-num">3</div>
+      <div class="tip-num">03</div>
+      <h4>行動網路：eSIM 推薦</h4>
+      <p>推薦 <strong>OKB eSIM</strong> 或 <strong>DJB 翻牆通</strong>。出口 IP 非香港，ChatGPT / Claude 實測可用，支援熱點分享，可供筆電使用 Claude Code。購前確認出口 IP 是否為台灣 / 非中港地區。</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">04</div>
+      <h4>飯店 Wi-Fi 使用 AI 工具</h4>
+      <p>推薦 <strong>ExpressVPN</strong>（Lightway 協議，操作最簡單）。⚠️ <strong>必須在台灣出發前安裝好</strong>，官網在中國境內被封。連線後選日本或新加坡節點（勿選香港）。</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">05</div>
       <h4>網路預辦登機</h4>
-      <p>BR706 起飛前 48 小時（<strong>5/31 16:50</strong>）即可透過長榮官網或 EVA App 完成，下載登機證省去機場排隊時間。</p>
+      <p>BR706 起飛前 48 小時（<strong>5/31 16:50</strong> 起）透過長榮官網或 EVA App 完成，下載電子登機證省去機場排隊時間。</p>
     </div>
     <div class="tip-card">
-      <div class="tip-num">4</div>
+      <div class="tip-num">06</div>
       <h4>旅遊平安險</h4>
       <p>出發前投保，確認保障含<strong>大陸地區醫療</strong>與行程取消。確認信用卡附贈保險是否涵蓋，或另行投保補強。</p>
     </div>
     <div class="tip-card">
-      <div class="tip-num">5</div>
+      <div class="tip-num">07</div>
       <h4>6/5 三個硬時間點</h4>
-      <p><strong>15:00</strong> 取行李 → <strong>15:30</strong> 中山公園站進站 → <strong>16:30</strong> 浦東機場。整個 Day 4 均依此倒推設計。</p>
+      <p><strong>15:00</strong> 返回萬麗取行李 →<br>
+      <strong>15:30</strong> 中山公園站出發搭 L2 →<br>
+      <strong>16:30</strong> 抵達浦東機場（起飛前 3.5 小時）</p>
     </div>
     <div class="tip-card">
-      <div class="tip-num">6</div>
+      <div class="tip-num">08</div>
       <h4>磁浮優惠票</h4>
-      <p>浦東機場抵達層購票處，憑<strong>當日機票</strong>可享 ¥40 優惠（標準 ¥50）。紙本或手機顯示電子機票均可。</p>
+      <p><strong>6/2 入境：</strong>憑當日機票享 ¥40 優惠（標準 ¥50）<br>
+      <strong>6/5 回程：</strong>標準票 ¥50<br>
+      紙本或手機顯示電子機票均可使用。</p>
     </div>
+  </div>
+
+  <!-- ── 最終行程流程圖 ── -->
+  <div class="section-title">🗺️ 最終行程流程圖</div>
+  <div class="flow-chart">
+<span class="flow-date">06/02（二）</span>
+  家 → 高雄捷運紅線 → 小港站（R4a）→ 步行至 KHH T1
+  14:20 抵達機場
+  16:50 BR706 起飛
+  19:05 PVG 落地 → 磁浮（¥40）→ L2 → 中山公園 → 龍之夢萬麗
+  晚餐：南京大牌檔 / 七欣天（商場內）or 頂特勒粥麵館（深夜）
+
+<span class="flow-date">06/03（三）</span>
+  08:30 從萬麗搭滴滴 → ATMOCE（浦東自貿區 <span class="flow-key">華益路76號4幢104-108室</span>）
+  10:00–11:45 商務會談
+  11:45–13:00 午餐
+  13:00 搭滴滴 → SNEC 展館（<span class="flow-key">青浦區崧澤大道333號</span>）
+  14:00–16:00 SNEC 展場考察
+  16:00–18:00 ⭐ 華為數字能源新品發表會
+  18:00 滴滴 → <span class="flow-key">丰顺府（蟠龍新天地）</span>晚宴
+
+<span class="flow-date">06/04（四）</span>
+  07:30 L2 → 徐涇東 → SNEC
+  上午：電芯 / PCS / EMS 技術研討 + 商務商談
+  13:00–15:00 保威 Ben Winter 下午茶
+  17:30 返回萬麗
+  19:00 與仁潔晚餐
+
+<span class="flow-date">06/05（五）</span>
+  09:00 退房寄存
+  09:15 法租界（武康路 / 安福路）
+  10:55 田子坊（泰康路石庫門）
+  12:00 新天地午餐
+  13:00 南京西路（星巴克烘焙工坊 + 蝴蝶酥）
+  <span class="flow-flag">⚑ 15:00 取行李</span>
+  <span class="flow-flag">⚑ 15:30 L2 → 龍陽路 → 磁浮（¥50）→ PVG</span>
+  <span class="flow-flag">⚑ 16:30 抵達 PVG（起飛前 3.5 小時）</span>
+  20:05 BR705 起飛
+  22:20 KHH 落地 ✈️
   </div>
 
 </div>
 
 <footer>
-  <strong>上海 SNEC 商務行程 2026</strong> · 旅客：Yeh Hsinsung · 訂位代號 FY8PUZ<br>
-  根據長榮航空電子機票（FY8PUZ）、SNEC 展會行程及各項確認資訊整理，已更新飯店確認、ATMOCE 拜訪及華為發表會等關鍵資訊。
+  <strong>上海 SNEC 商務行程 2026 · 最終完整版</strong><br>
+  旅客：Yeh Hsinsung · 訂位代號 FY8PUZ · 機票 695-2465416314<br>
+  根據長榮航空電子機票、SNEC 官方展館資訊（崧澤大道333號）、ATMOCE 商務邀約及華為發表會議程整理。
 </footer>
 
 </body>
